@@ -11,13 +11,13 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      showPerformanceOverlay: true,
+      showPerformanceOverlay: false,
       theme: lightTheme,
       darkTheme: darkTheme,
       themeMode: ThemeMode.light,
@@ -56,10 +56,6 @@ class HomePage extends HookWidget {
       });
     });
     final selections = useState(List.generate(3, (_) => false));
-    //useMemoized(() => List.generate(3, (_) => false));
-
-    Future.delayed(0.msecs, () => pageIndex.value = 1);
-    Future.microtask(() => pageIndex.value = 2);
 
     return Scaffold(
       extendBodyBehindAppBar: true,
@@ -69,6 +65,8 @@ class HomePage extends HookWidget {
         slivers: [
           SliverAppBar(
             pinned: true,
+            floating: true,
+            snap: true,
             toolbarHeight: 0.0,
             expandedHeight: frontHeight,
             backgroundColor: scaffoldBackgroundColor,

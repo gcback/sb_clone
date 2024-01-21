@@ -1,4 +1,3 @@
-import 'dart:ui';
 import 'package:align_positioned/align_positioned.dart';
 import 'package:mylib/mylib.dart';
 
@@ -49,11 +48,13 @@ class AppFlexibleSpace extends StatelessWidget {
           AlignPositioned(
             alignment: Alignment.bottomCenter,
             dy: -kBottomNavigationBarHeight * 1.8,
-            child: Text('Happy New Year!',
-                style: TextStyle(
-                    fontSize: 36.0,
-                    color: Colors.grey.shade400,
-                    fontWeight: FontWeight.bold)),
+            child: Text(
+              'Happy New Year!',
+              style: TextStyle(
+                  fontSize: 36.0,
+                  color: Colors.grey.shade400,
+                  fontWeight: FontWeight.bold),
+            ),
           ),
         ],
       ),
