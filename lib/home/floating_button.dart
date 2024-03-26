@@ -13,8 +13,6 @@ class ExpandedFloatingButton extends HookWidget {
 
     return Material(
       borderRadius: BorderRadius.circular(32.0),
-      // type: MaterialType.circle,
-      // color: Theme.of(context).scaffoldBackgroundColor,
       clipBehavior: Clip.hardEdge,
       child: InkWell(
         onTap: onTap,

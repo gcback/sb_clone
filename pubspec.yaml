@@ -37,7 +37,7 @@ dependencies:
   mylib:
     path: ../mylib
   gap: ^3.0.1
-  align_positioned: ^4.0.0
+  align_positioned: ^4.0.1
   sliver_tools: ^0.2.12
   flutter_lints: ^3.0.1
 

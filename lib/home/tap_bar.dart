@@ -4,12 +4,12 @@ class AppTapBar extends HookWidget implements PreferredSizeWidget {
   const AppTapBar({
     super.key,
     required this.size,
-    required this.shadow,
+    required this.opacity,
     required this.backgroundColor,
   });
 
   final Size size;
-  final ValueNotifier<double> shadow;
+  final ValueNotifier<double> opacity;
   final Color backgroundColor;
 
   @override
@@ -19,7 +19,7 @@ class AppTapBar extends HookWidget implements PreferredSizeWidget {
         color: backgroundColor,
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.shade400.withOpacity(shadow.value),
+            color: Colors.grey.shade400.withOpacity(opacity.value),
             offset: const Offset(0.0, 2),
             blurRadius: 0.8,
             spreadRadius: 0.25,
